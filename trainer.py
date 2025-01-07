@@ -25,7 +25,8 @@ class Trainer:
         self.train_dataset = train_dataset
         self.callbacks = defaultdict(list)
         if config.device == 'auto':
-            self.device = 'gpu' if torch.cuda.is_available() else 'cpu'
+            self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
+
         else:
             self.device = config.device
         self.model = self.model.to(self.device)
