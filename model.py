@@ -2,7 +2,7 @@ import math
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
-from minbert.utils import CfgNode as CN
+from .utils import CfgNode as CN
 
 class NewGELU(nn.Module):
     def forward(self, x):
